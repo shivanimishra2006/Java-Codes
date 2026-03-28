@@ -33,5 +33,9 @@ class MainPC
         {
             System.out.println("Exception found!");
         }
+        catch(Exception e)
+        {
+            System.out.println("Exception!");
+        }
     }
 }

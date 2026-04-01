@@ -2,15 +2,16 @@
 
 package Exception_Handling_in_java;
 
-class UserDefine extends Exception
+class UserdefinedException extends Exception
 {
-    // Constructor to accept message
-    UserDefine(String message)
+    public void Show()
     {
-        super(message);
+        System.out.println("Insufficient Balance!");
     }
-
-    static void Checkage(int age) throws UserDefine
+}
+class TestVoteAge
+{
+    static void Checkage(int age) throws UserdefinedException
     {
         if(age >= 18)
         {
@@ -18,17 +19,22 @@ class UserDefine extends Exception
         }
         else
         {
-            throw new UserDefine("Not Eligible to vote");
+            System.out.println("Not eligible for vote!");
         }
     }
+}
+
+class UserDefine
+{
     public static void main(String XXYZ[])
     {
+        TestVoteAge tva=new TestVoteAge();
         try
         {
             int a = 8;
-            Checkage(a);
+            tva.Checkage(a);
         }
-        catch(UserDefine e)
+        catch(UserdefinedException e)
         {
             System.out.println("Exception occurred! " + e.getMessage());
         }

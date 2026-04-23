@@ -30,7 +30,7 @@ class MainArr {
 
             System.out.println("Enter marks of student " + (i + 1) + ":");
             int marks = sc.nextInt();
-            sc.nextLine(); // ✅ clear buffer again
+            sc.nextLine(); 
 
             stu[i] = new StudentArr(name, marks);
         }
